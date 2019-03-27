@@ -5,9 +5,7 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullReferenceExceptionDemo", "net472\NullReferenceExceptionDemo.csproj", "{A6B4028F-1233-47DD-9892-374DB50F1011}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedTypes", "shared\SharedTypes\SharedTypes.csproj", "{C1FFB76A-DD42-48D8-83A8-805506BA3D9B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullReferenceExceptionCoreDemo", "netcore\NullReferenceExceptionCoreDemo.csproj", "{665CE6C7-190B-4C8C-85E2-01B998FB002B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NullReferenceExceptionCoreDemo", "netcore\NullReferenceExceptionCoreDemo.csproj", "{665CE6C7-190B-4C8C-85E2-01B998FB002B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +23,6 @@ Global
 		{A6B4028F-1233-47DD-9892-374DB50F1011}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A6B4028F-1233-47DD-9892-374DB50F1011}.Release|x64.ActiveCfg = Release|x64
 		{A6B4028F-1233-47DD-9892-374DB50F1011}.Release|x64.Build.0 = Release|x64
-		{C1FFB76A-DD42-48D8-83A8-805506BA3D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1FFB76A-DD42-48D8-83A8-805506BA3D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1FFB76A-DD42-48D8-83A8-805506BA3D9B}.Debug|x64.ActiveCfg = Debug|x64
-		{C1FFB76A-DD42-48D8-83A8-805506BA3D9B}.Debug|x64.Build.0 = Debug|x64
-		{C1FFB76A-DD42-48D8-83A8-805506BA3D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1FFB76A-DD42-48D8-83A8-805506BA3D9B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1FFB76A-DD42-48D8-83A8-805506BA3D9B}.Release|x64.ActiveCfg = Release|x64
-		{C1FFB76A-DD42-48D8-83A8-805506BA3D9B}.Release|x64.Build.0 = Release|x64
 		{665CE6C7-190B-4C8C-85E2-01B998FB002B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{665CE6C7-190B-4C8C-85E2-01B998FB002B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{665CE6C7-190B-4C8C-85E2-01B998FB002B}.Debug|x64.ActiveCfg = Debug|Any CPU

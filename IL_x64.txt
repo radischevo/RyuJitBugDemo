@@ -1,6 +1,78 @@
+// Type: NullReferenceExceptionDemo.Container 
+// Assembly: NullReferenceExceptionDemo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 898AB015-A929-46B5-9831-B89D82542F7E
+// Location: C:\Projects\RyuJitBugDemo\src\net472\bin\Release\NullReferenceExceptionDemo.exe
+// Sequence point data from C:\Projects\RyuJitBugDemo\src\net472\bin\Release\NullReferenceExceptionDemo.pdb
+
+.class public auto ansi beforefieldinit
+  NullReferenceExceptionDemo.Container
+    extends [mscorlib]System.Object
+{
+
+  .field private initonly valuetype NullReferenceExceptionDemo.Option '<Item>k__BackingField'
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor()
+    = (01 00 00 00 )
+
+  .method public hidebysig specialname rtspecialname instance void
+    .ctor(
+      valuetype NullReferenceExceptionDemo.Option item
+    ) cil managed
+  {
+    .maxstack 8
+
+    // [28 9 - 28 38]
+    IL_0000: ldarg.0      // this
+    IL_0001: call         instance void [mscorlib]System.Object::.ctor()
+
+    // [30 13 - 30 25]
+    IL_0006: ldarg.0      // this
+    IL_0007: ldarg.1      // item
+    IL_0008: stfld        valuetype NullReferenceExceptionDemo.Option NullReferenceExceptionDemo.Container::'<Item>k__BackingField'
+
+    // [31 9 - 31 10]
+    IL_000d: ret
+
+  } // end of method Container::.ctor
+
+  .method public hidebysig specialname instance valuetype NullReferenceExceptionDemo.Option
+    get_Item() cil managed
+  {
+    .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor()
+      = (01 00 00 00 )
+    .maxstack 8
+
+    // [33 30 - 33 34]
+    IL_0000: ldarg.0      // this
+    IL_0001: ldfld        valuetype NullReferenceExceptionDemo.Option NullReferenceExceptionDemo.Container::'<Item>k__BackingField'
+    IL_0006: ret
+
+  } // end of method Container::get_Item
+
+  .property instance valuetype NullReferenceExceptionDemo.Option Item()
+  {
+    .get instance valuetype NullReferenceExceptionDemo.Option NullReferenceExceptionDemo.Container::get_Item()
+  } // end of property Container::Item
+} // end of class NullReferenceExceptionDemo.Container
+
+// Type: NullReferenceExceptionDemo.Option 
+// Assembly: NullReferenceExceptionDemo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: FAA97C8A-4B5D-4F5F-B17C-B345B2A3A10E
+// Location: C:\Projects\RyuJitBugDemo\src\net472\bin\x64\Release\NullReferenceExceptionDemo.exe
+// Sequence point data from decompiler
+
+.class public sealed sequential ansi beforefieldinit
+  NullReferenceExceptionDemo.Option
+    extends [mscorlib]System.ValueType
+{
+
+  .field private object _foo
+
+  .field private int32 _bar
+} // end of class NullReferenceExceptionDemo.Option
+
 // Type: NullReferenceExceptionDemo.Program 
 // Assembly: NullReferenceExceptionDemo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 1FD0CE02-6ED8-49F7-9B1C-9144898656DB
+// MVID: 898AB015-A929-46B5-9831-B89D82542F7E
 // Location: C:\Projects\RyuJitBugDemo\src\net472\bin\Release\NullReferenceExceptionDemo.exe
 // Sequence point data from C:\Projects\RyuJitBugDemo\src\net472\bin\Release\NullReferenceExceptionDemo.pdb
 
@@ -9,159 +81,31 @@
     extends [mscorlib]System.Object
 {
 
-  .class nested private sealed auto ansi serializable beforefieldinit
-    '<>c'
-      extends [mscorlib]System.Object
-  {
-    .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor()
-      = (01 00 00 00 )
-
-    .field public static initonly class NullReferenceExceptionDemo.Program/'<>c' '<>9'
-
-    .field public static class [mscorlib]System.Func`2<class [SharedTypes]SharedTypes.ImageInfo, class [mscorlib]System.Collections.Generic.IEnumerable`1<class [SharedTypes]SharedTypes.ImageLink>> '<>9__0_0'
-
-    .field public static class [mscorlib]System.Func`2<class [SharedTypes]SharedTypes.ImageLink, valuetype [SharedTypes]SharedTypes.ImageModel> '<>9__0_1'
-
-    .method private hidebysig static specialname rtspecialname void
-      .cctor() cil managed
-    {
-      .maxstack 8
-
-      IL_0000: newobj       instance void NullReferenceExceptionDemo.Program/'<>c'::.ctor()
-      IL_0005: stsfld       class NullReferenceExceptionDemo.Program/'<>c' NullReferenceExceptionDemo.Program/'<>c'::'<>9'
-      IL_000a: ret
-
-    } // end of method '<>c'::.cctor
-
-    .method public hidebysig specialname rtspecialname instance void
-      .ctor() cil managed
-    {
-      .maxstack 8
-
-      IL_0000: ldarg.0      // this
-      IL_0001: call         instance void [mscorlib]System.Object::.ctor()
-      IL_0006: ret
-
-    } // end of method '<>c'::.ctor
-
-    .method assembly hidebysig instance class [mscorlib]System.Collections.Generic.IEnumerable`1<class [SharedTypes]SharedTypes.ImageLink>
-      '<Main>b__0_0'(
-        class [SharedTypes]SharedTypes.ImageInfo s
-      ) cil managed
-    {
-      .maxstack 8
-
-      // [25 34 - 25 45]
-      IL_0000: ldarg.1      // s
-      IL_0001: callvirt     instance valuetype [SharedTypes]SharedTypes.Option`1<class [SharedTypes]SharedTypes.ImageLink> [SharedTypes]SharedTypes.ImageInfo::get_Thumbnail()
-      IL_0006: box          valuetype [SharedTypes]SharedTypes.Option`1<class [SharedTypes]SharedTypes.ImageLink>
-      IL_000b: ret
-
-    } // end of method '<>c'::'<Main>b__0_0'
-
-    .method assembly hidebysig instance valuetype [SharedTypes]SharedTypes.ImageModel
-      '<Main>b__0_1'(
-        class [SharedTypes]SharedTypes.ImageLink s
-      ) cil managed
-    {
-      .maxstack 8
-
-      // [26 30 - 26 82]
-      IL_0000: ldarg.1      // s
-      IL_0001: callvirt     instance class [System]System.Uri [SharedTypes]SharedTypes.ImageLink::get_Url()
-      IL_0006: callvirt     instance string [System]System.Uri::get_AbsoluteUri()
-      IL_000b: ldarg.1      // s
-      IL_000c: callvirt     instance int32 [SharedTypes]SharedTypes.ImageLink::get_Width()
-      IL_0011: ldarg.1      // s
-      IL_0012: callvirt     instance int32 [SharedTypes]SharedTypes.ImageLink::get_Height()
-      IL_0017: newobj       instance void [SharedTypes]SharedTypes.ImageModel::.ctor(string, int32, int32)
-      IL_001c: ret
-
-    } // end of method '<>c'::'<Main>b__0_1'
-  } // end of class '<>c'
-
   .method public hidebysig static void
     Main(
       string[] args
     ) cil managed
   {
     .entrypoint
-    .maxstack 5
+    .maxstack 2
     .locals init (
-      [0] valuetype [SharedTypes]SharedTypes.JitVersion jitVersion,
-      [1] class [mscorlib]System.Collections.Generic.List`1<valuetype [SharedTypes]SharedTypes.ImageModel> thumbnails
+      [0] class NullReferenceExceptionDemo.Container container
     )
 
-    // [13 13 - 13 67]
-    IL_0000: newobj       instance void [SharedTypes]SharedTypes.JitVersionInfo::.ctor()
-    IL_0005: call         instance valuetype [SharedTypes]SharedTypes.JitVersion [SharedTypes]SharedTypes.JitVersionInfo::GetJitVersion()
-    IL_000a: stloc.0      // jitVersion
+    // [9 13 - 9 40]
+    IL_0000: ldnull
+    IL_0001: stloc.0      // container
 
-    // [14 13 - 14 62]
-    IL_000b: ldstr        "JIT Version: {0}."
-    IL_0010: ldloc.0      // jitVersion
-    IL_0011: box          [SharedTypes]SharedTypes.JitVersion
-    IL_0016: call         string [mscorlib]System.String::Format(string, object)
-    IL_001b: call         void [mscorlib]System.Console::WriteLine(string)
+    // [10 13 - 10 53]
+    IL_0002: ldstr        "{0}."
+    IL_0007: ldloc.0      // container
+    IL_0008: callvirt     instance valuetype NullReferenceExceptionDemo.Option NullReferenceExceptionDemo.Container::get_Item()
+    IL_000d: box          NullReferenceExceptionDemo.Option
+    IL_0012: call         string [mscorlib]System.String::Format(string, object)
+    IL_0017: call         void [mscorlib]System.Console::WriteLine(string)
 
-    // [16 13 - 22 15]
-    IL_0020: newobj       instance void class [mscorlib]System.Collections.Generic.List`1<class [SharedTypes]SharedTypes.ImageInfo>::.ctor()
-    IL_0025: dup
-    IL_0026: ldstr        "https://example.com/images/thumbnails/1337.jpg"
-    IL_002b: ldc.i4       240 // 0x000000f0
-    IL_0030: ldc.i4.s     90 // 0x5a
-    IL_0032: call         class [SharedTypes]SharedTypes.ImageInfo [SharedTypes]SharedTypes.ImageInfo::Create(string, int32, int32)
-    IL_0037: callvirt     instance void class [mscorlib]System.Collections.Generic.List`1<class [SharedTypes]SharedTypes.ImageInfo>::Add(!0/*class [SharedTypes]SharedTypes.ImageInfo*/)
-    IL_003c: dup
-    IL_003d: ldstr        "https://example.com/thumbnails/42.jpg"
-    IL_0042: ldc.i4.s     100 // 0x64
-    IL_0044: ldc.i4.s     60 // 0x3c
-    IL_0046: call         class [SharedTypes]SharedTypes.ImageInfo [SharedTypes]SharedTypes.ImageInfo::Create(string, int32, int32)
-    IL_004b: callvirt     instance void class [mscorlib]System.Collections.Generic.List`1<class [SharedTypes]SharedTypes.ImageInfo>::Add(!0/*class [SharedTypes]SharedTypes.ImageInfo*/)
-    IL_0050: dup
-    IL_0051: ldnull
-    IL_0052: callvirt     instance void class [mscorlib]System.Collections.Generic.List`1<class [SharedTypes]SharedTypes.ImageInfo>::Add(!0/*class [SharedTypes]SharedTypes.ImageInfo*/)
-    IL_0057: dup
-    IL_0058: ldnull
-    IL_0059: ldc.i4.0
-    IL_005a: ldc.i4.0
-    IL_005b: call         class [SharedTypes]SharedTypes.ImageInfo [SharedTypes]SharedTypes.ImageInfo::Create(string, int32, int32)
-    IL_0060: callvirt     instance void class [mscorlib]System.Collections.Generic.List`1<class [SharedTypes]SharedTypes.ImageInfo>::Add(!0/*class [SharedTypes]SharedTypes.ImageInfo*/)
-
-    // [24 13 - 27 27]
-    IL_0065: ldsfld       class [mscorlib]System.Func`2<class [SharedTypes]SharedTypes.ImageInfo, class [mscorlib]System.Collections.Generic.IEnumerable`1<class [SharedTypes]SharedTypes.ImageLink>> NullReferenceExceptionDemo.Program/'<>c'::'<>9__0_0'
-    IL_006a: dup
-    IL_006b: brtrue.s     IL_0084
-    IL_006d: pop
-    IL_006e: ldsfld       class NullReferenceExceptionDemo.Program/'<>c' NullReferenceExceptionDemo.Program/'<>c'::'<>9'
-    IL_0073: ldftn        instance class [mscorlib]System.Collections.Generic.IEnumerable`1<class [SharedTypes]SharedTypes.ImageLink> NullReferenceExceptionDemo.Program/'<>c'::'<Main>b__0_0'(class [SharedTypes]SharedTypes.ImageInfo)
-    IL_0079: newobj       instance void class [mscorlib]System.Func`2<class [SharedTypes]SharedTypes.ImageInfo, class [mscorlib]System.Collections.Generic.IEnumerable`1<class [SharedTypes]SharedTypes.ImageLink>>::.ctor(object, native int)
-    IL_007e: dup
-    IL_007f: stsfld       class [mscorlib]System.Func`2<class [SharedTypes]SharedTypes.ImageInfo, class [mscorlib]System.Collections.Generic.IEnumerable`1<class [SharedTypes]SharedTypes.ImageLink>> NullReferenceExceptionDemo.Program/'<>c'::'<>9__0_0'
-    IL_0084: call         class [mscorlib]System.Collections.Generic.IEnumerable`1<!!1/*class [SharedTypes]SharedTypes.ImageLink*/> [System.Core]System.Linq.Enumerable::SelectMany<class [SharedTypes]SharedTypes.ImageInfo, class [SharedTypes]SharedTypes.ImageLink>(class [mscorlib]System.Collections.Generic.IEnumerable`1<!!0/*class [SharedTypes]SharedTypes.ImageInfo*/>, class [mscorlib]System.Func`2<!!0/*class [SharedTypes]SharedTypes.ImageInfo*/, class [mscorlib]System.Collections.Generic.IEnumerable`1<!!1/*class [SharedTypes]SharedTypes.ImageLink*/>>)
-    IL_0089: ldsfld       class [mscorlib]System.Func`2<class [SharedTypes]SharedTypes.ImageLink, valuetype [SharedTypes]SharedTypes.ImageModel> NullReferenceExceptionDemo.Program/'<>c'::'<>9__0_1'
-    IL_008e: dup
-    IL_008f: brtrue.s     IL_00a8
-    IL_0091: pop
-    IL_0092: ldsfld       class NullReferenceExceptionDemo.Program/'<>c' NullReferenceExceptionDemo.Program/'<>c'::'<>9'
-    IL_0097: ldftn        instance valuetype [SharedTypes]SharedTypes.ImageModel NullReferenceExceptionDemo.Program/'<>c'::'<Main>b__0_1'(class [SharedTypes]SharedTypes.ImageLink)
-    IL_009d: newobj       instance void class [mscorlib]System.Func`2<class [SharedTypes]SharedTypes.ImageLink, valuetype [SharedTypes]SharedTypes.ImageModel>::.ctor(object, native int)
-    IL_00a2: dup
-    IL_00a3: stsfld       class [mscorlib]System.Func`2<class [SharedTypes]SharedTypes.ImageLink, valuetype [SharedTypes]SharedTypes.ImageModel> NullReferenceExceptionDemo.Program/'<>c'::'<>9__0_1'
-    IL_00a8: call         class [mscorlib]System.Collections.Generic.IEnumerable`1<!!1/*valuetype [SharedTypes]SharedTypes.ImageModel*/> [System.Core]System.Linq.Enumerable::Select<class [SharedTypes]SharedTypes.ImageLink, valuetype [SharedTypes]SharedTypes.ImageModel>(class [mscorlib]System.Collections.Generic.IEnumerable`1<!!0/*class [SharedTypes]SharedTypes.ImageLink*/>, class [mscorlib]System.Func`2<!!0/*class [SharedTypes]SharedTypes.ImageLink*/, !!1/*valuetype [SharedTypes]SharedTypes.ImageModel*/>)
-    IL_00ad: call         class [mscorlib]System.Collections.Generic.List`1<!!0/*valuetype [SharedTypes]SharedTypes.ImageModel*/> [System.Core]System.Linq.Enumerable::ToList<valuetype [SharedTypes]SharedTypes.ImageModel>(class [mscorlib]System.Collections.Generic.IEnumerable`1<!!0/*valuetype [SharedTypes]SharedTypes.ImageModel*/>)
-    IL_00b2: stloc.1      // thumbnails
-
-    // [29 13 - 29 55]
-    IL_00b3: ldstr        "{0}."
-    IL_00b8: ldloc.1      // thumbnails
-    IL_00b9: callvirt     instance int32 class [mscorlib]System.Collections.Generic.List`1<valuetype [SharedTypes]SharedTypes.ImageModel>::get_Count()
-    IL_00be: box          [mscorlib]System.Int32
-    IL_00c3: call         string [mscorlib]System.String::Format(string, object)
-    IL_00c8: call         void [mscorlib]System.Console::WriteLine(string)
-
-    // [30 9 - 30 10]
-    IL_00cd: ret
+    // [11 9 - 11 10]
+    IL_001c: ret
 
   } // end of method Program::Main
 } // end of class NullReferenceExceptionDemo.Program
