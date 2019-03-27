@@ -4,14 +4,20 @@ namespace SharedTypes
 {
     public sealed class ImageInfo
     {
-        public ImageInfo(ImageLink original, Option<ImageLink> thumbnail)
+        public ImageInfo(Option<ImageLink> thumbnail)
         {
-            Original = original ?? throw new ArgumentNullException(nameof(original));
             Thumbnail = thumbnail;
         }
 
-        public ImageLink Original { get; }
-
         public Option<ImageLink> Thumbnail { get; }
+
+        public static ImageInfo Create(string thumbnailUrl, int width, int height)
+        {
+            var thumbnail = string.IsNullOrEmpty(thumbnailUrl)
+                ? default(Option<ImageLink>)
+                : new ImageLink(new Uri(thumbnailUrl, UriKind.Absolute), 120, 60);
+
+            return new ImageInfo(thumbnail);
+        }
     }
 }

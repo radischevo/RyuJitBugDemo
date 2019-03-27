@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NullReferenceExceptionDemo
+namespace SharedTypes
 {
     public enum JitVersion
     {
