@@ -2,6 +2,7 @@
 
 namespace SharedTypes
 {
+    // Taken from https://aakinshin.net/posts/jit-version-determining-in-runtime/
     public enum JitVersion
     {
         Mono, MsX86, MsX64, RyuJit
